@@ -1,0 +1,54 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+ 
+
+  <ul class="nav">
+    {% for item in site.data.sidebar %} 
+  
+    {% assign submenusize = item.submenu |  size %}
+
+    {% if submenusize == 0 %}
+
+    <li class="nav-item">
+      <a class="nav-link" href="{{ item.link }}">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title"> {{item.menu}}</span>
+      </a>
+    </li>
+    {% endif %} 
+
+    {% if submenusize > 0 %}
+    <li class="nav-item">
+
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="#{{ item.link }}"
+        aria-expanded="false"
+        aria-controls="ui-basic"
+      >
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title"> {{item.menu}} </span>
+        <i class="menu-arrow"></i>
+      </a>
+
+      <div class="collapse" id="{{ item.link }}">
+        <ul class="nav flex-column sub-menu">
+          {% for citem in item.submenu %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ citem.link }}">{{ citem.name }}</a>
+          </li>
+
+          {% endfor %}
+        </ul>
+      </div>
+
+    
+    </li>
+    {% endif %}
+    
+    {% endfor %}
+
+  </ul>
+
+</nav>

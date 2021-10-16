@@ -1,0 +1,61 @@
+- menu: Dashboard
+  link: /index.html
+- menu: Getting Started
+  link: getting-started
+  submenu:
+    - name: Template1
+      link: /getting-started/template1.html
+    - name: Dropdowns
+      link: /getting-started/dropdowns.html  
+    - name: Typography
+      link: /getting-started/typography.html    
+- menu: SEED General
+  link: seed-general
+  submenu:
+    - name: Midi-Icons
+      link: /general/midi.html
+    
+- menu: Technical
+  link: technical
+  submenu:
+  # - name: Buttons
+  #   link: /getting-started/buttons.html
+  #   - name: Dropdowns
+  #     link: /getting-started/dropdowns.html  
+  #   - name: Typography
+  #     link: /getting-started/typography.html    
+- menu: Company/Retailer
+  link: comp-retailer
+  # submenu:
+  #   - name: Buttons
+  #     link: /getting-started/buttons.html
+  #   - name: Dropdowns
+  #     link: /getting-started/dropdowns.html  
+  #   - name: Typography
+  #     link: /getting-started/typography.html    
+- menu: Investor Relation
+  link: investor-relation
+  submenu:
+    # - name: Buttons
+    #   link: /getting-started/buttons.html
+    # - name: Dropdowns
+    #   link: /getting-started/dropdowns.html  
+    # - name: Typography
+    #   link: /getting-started/typography.html    
+- menu: Corporate Treasury
+  link: corp-treasury
+  submenu:
+    # - name: Buttons
+    #   link: /getting-started/buttons.html
+    # - name: Dropdowns
+    #   link: /getting-started/dropdowns.html  
+    # - name: Typography
+    #   link: /getting-started/typography.html    
+- menu: FAQs
+  link: seed-faq
+  submenu:
+    - name: General
+      link: /app/faqs/general.html
+    - name: Technical
+      link: /app/faqs/technical.html  
+
