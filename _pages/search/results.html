@@ -1,7 +1,7 @@
 ---
 layout: default
 category: tech
-permalink: /tech/searchresult
+permalink: /search/results
 ---
 
 <div class="row">
@@ -24,12 +24,12 @@ permalink: /tech/searchresult
   </div>
 </div>
 
-<script src="{{ site.url }}/assets/vendors/lunr/lunr.min.js"></script>
+<script src='{{ "/assets/vendors/lunr/lunr.min.js" | absolute_url }}'></script>
 <script type="application/javascript">
   window.store = {% include json/search-index.html %};
 </script>
 
-<script src="{{ site.url }}/assets/js/search.js"></script>
+<script src='{{ "/assets/js/search.js" | absolute_url }}'></script>
 
 <script>
   search();
