@@ -58,4 +58,10 @@
       link: /seed-support/app/faqs/general.html
     - name: Technical
       link: /seed-support/app/faqs/technical.html  
+- menu: Test
+  link: seed-test
+  submenu:
+    - name: test
+      link: /seed-support/app/faqs/test.html
+  
 
