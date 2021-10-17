@@ -62,6 +62,6 @@
   link: seed-test
   submenu:
     - name: test
-      link: /seed-support/app/faqs/test.html
+      link: /seed-support/getting-started/template1.html
   
 
