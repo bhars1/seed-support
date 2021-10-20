@@ -19,7 +19,7 @@
     class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
   >
     <button
-      class="navbar-toggler navbar-toggler align-self-center"
+      class="navbar-toggler align-self-center"
       type="button"
       data-toggle="minimize"
     >
@@ -27,14 +27,14 @@
     </button>
     <ul class="navbar-nav mr-lg-2">
 
-      <div class="input-group ml-5">
+      <div class="input-group ml-5" id="searchBar">
         <div class="input-group-prepend">
           <!-- <button class="btn btn-outline-secondary" type="button"><i class="icon-search" style="color: white;"></i></button> -->
           <a type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
             <i class="icon-search" style="color: white;"></i>
           </a>
         </div>
-        <input type="text" class="form-control" style="width: 400px;" placeholder="" aria-label="" aria-describedby="basic-addon1">
+        <input type="text" id="navbar-search-input" placeholder="Search now" class="form-control" style="width: 400px;" aria-label="search" aria-describedby="search">
       </div>
 
 
@@ -69,6 +69,80 @@
           <span><i class="mdi mdi-telegram"></i><strong>Chat with Us</strong></span>
         </a>
       </li>
+      <a id="sidebarMenuButton" class="btn btn-rounded btn-primary p-2" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseExample">
+        <span><i class="mdi mdi-apps"></i></span>
+      </a>
     </ul>
   </div>
 </nav>
+
+<div class="collapse" id="collapseMenu">
+  <div class="card card-body">
+    <nav class="sidebarMobile" id="sidebar">
+      <ul class="nav mt-5">
+      <li class="nav-item container">
+        <div class="input-group" id="search">
+          <div class="input-group-prepend">
+            <a type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
+              <i class="icon-search" style="color: white;"></i>
+            </a>
+          </div>
+          <input type="text" id="navbar-search-input" placeholder="Search now" class="form-control" aria-label="search" aria-describedby="search">
+        </div>
+      </li>
+      </ul>
+      <ul class="nav">
+        {% for item in site.data.sidebar %} 
+      
+        {% assign submenusize = item.submenu |  size %}
+    
+        {% if submenusize == 0 %}
+    
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.link }}">
+            <i class="icon-grid menu-icon"></i>
+            <span class="menu-title"> {{item.menu}}</span>
+          </a>
+        </li>
+        {% endif %} 
+    
+        {% if submenusize > 0 %}
+        <li class="nav-item">
+    
+          <a
+            class="nav-link"
+            data-toggle="collapse"
+            href="#{{ item.link }}"
+            aria-expanded="false"
+            aria-controls="ui-basic"
+          >
+            <i class="icon-layout menu-icon"></i>
+            <span class="ml-2 menu-title"> {{item.menu}} </span>
+            <i class="menu-arrow"></i>
+          </a>
+    
+          <div class="collapse" id="{{ item.link }}">
+            <ul class="nav flex-column sub-menu">
+              {% for citem in item.submenu %}
+    
+              <li class="nav-item">
+                <a class="nav-link" href="{{ citem.link }}">{{ citem.name }}</a>
+              </li>
+    
+              {% endfor %}
+            </ul>
+          </div>
+    
+        
+        </li>
+        {% endif %}
+        
+        {% endfor %}
+    
+      </ul>
+    
+    </nav>
+    
+  </div>
+</div>
+

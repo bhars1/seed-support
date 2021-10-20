@@ -20351,7 +20351,7 @@ code {
 
 .accordion > .card .card-body {
   font-size: 14px;
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem 1rem 1rem 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -20887,7 +20887,7 @@ code {
   font-size: 0.875rem;
   line-height: 1;
   font-weight: 400;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   /* Buttons with only icons */
   /* Buttons with icon and text */
 }

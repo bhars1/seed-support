@@ -67,20 +67,50 @@
   font-weight: 700;
 }
 
-.faq .card .card-header .btn-header-link:after {
+.btn-primary, .wizard > .actions a {
+  color: #fff;
+  background-color: #FCD462;
+  border-color: #FCD462;
+}
+
+.btn-primary:hover, .wizard > .actions a:hover {
+  color: #fff;
+  background-color: #FCD462;
+  border-color: #FCD462;
+}
+
+.btn-primary:focus, .wizard > .actions a:focus, .btn-primary.focus, .wizard > .actions a.focus {
+  color: #fff;
+  background-color: #FCD462;
+  border-color: #FCD462;
+}
+
+/* .faq .card .card-header .btn-header-link:after {
   font-family: 'Material Icons' !important;
   content: "\f72d";
   float: right;
   font-weight: 900;
-} 
+}  */
 
 .float-right {
   float: right;
 }
 
-.faq .card .card-header .btn-header-link.collapsed:after {
-  content: "\f106";
+.accordion > .card .card-header a[aria-expanded="true"] {
+  color: #1C1B19;
 }
+
+.accordion > .card .card-header a[aria-expanded="true"]:before {
+  margin: 20px;
+}
+
+.accordion > .card .card-header a[aria-expanded="false"]:before{
+  margin: 20px;
+}
+
+/* .faq .card .card-header .btn-header-link.collapsed:after {
+  content: "\f106";
+} */
 
 .menu-title {
   font-weight: 700;
@@ -126,6 +156,10 @@
   margin: 0 -30px;
 }
 
+.knowledge-header li {
+  list-style: none;
+}
+
 @media (max-width: 575px) {
   .knowledge-header .knowledge-meta {
       font-size: 16px;
@@ -133,7 +167,7 @@
 }
 
 .knowledge-header .knowledge-meta li {
-  padding: 0 30px;
+  padding: 0 15px;
   position: relative;
 }
 
@@ -400,4 +434,156 @@
   background-color: #1C1B19;
   color: #FCD462;
   /* border-radius: 4px; */
+}
+
+
+.sidebarMobile {
+  /* min-height: calc(100vh - 60px); */
+  background: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  padding: 0;
+  width: 100%;
+  z-index: 11;
+  transition: width 0.25s ease, background 0.25s ease;
+  -webkit-transition: width 0.25s ease, background 0.25s ease;
+  -moz-transition: width 0.25s ease, background 0.25s ease;
+  -ms-transition: width 0.25s ease, background 0.25s ease;
+}
+
+.sidebarMobile .nav {
+  /* margin-top: 40px; */
+  overflow: hidden;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* margin-bottom: 60px; */
+  align-items: center;
+}
+
+.sidebarMobile .nav .nav-item {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  transition-property: background;
+  -webkit-transition-property: background;
+  width: 100%;
+}
+
+.sidebarMobile .nav .nav-item .collapse {
+  z-index: 999;
+}
+
+.sidebarMobile .nav .nav-item .nav-link {
+  text-align: center;
+  /* display: -webkit-flex; */
+  /* display: flex; */
+  -webkit-align-items: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.8125rem 1.937rem 0.8125rem 1rem;
+  color: #6C7383;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.45s;
+  -moz-transition-duration: 0.45s;
+  -o-transition-duration: 0.45s;
+  transition-duration: 0.45s;
+  transition-property: color;
+  -webkit-transition-property: color;
+}
+
+.sidebarMobile .nav .nav-item.active > .nav-link {
+  background: #FCD462;
+}
+
+.sidebarMobile .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
+.sidebarMobile .nav:not(.sub-menu) > .nav-item:hover[aria-expanded="true"] {
+  background: #FCD462;
+}
+
+.sidebarMobile .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] {
+  background: #FCD462;
+}
+
+.sidebarMobile .nav:not(.sub-menu) > .nav-item.active {
+  background: #FCD462;
+}
+
+.sidebarMobile .nav.sub-menu {
+  background: #dfb232;
+}
+
+.sidebarMobile .sidebar {
+  background: #FCD462;
+}
+
+.sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {
+  background: #c19b2f !important;
+}
+
+
+#sidebarMenuButton {
+  display: none;
+}
+
+
+/* Mobile View */
+.menu-toggle {
+  color: #FFF;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+#sidebarMenuButton {
+  align-self: center !important;
+}
+
+#collapseMenu {
+  margin-bottom: -40px;
+}
+
+
+
+@media (max-width: 991px) {
+  header {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.active {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+
+  #searchBar{
+    display: none;
+  }
+
+  #sidebarMenuButton {
+    display: block;
+  }
+}
+
+.footer a {
+  color: #1C1B19;
+  font-size: inherit;
 }
