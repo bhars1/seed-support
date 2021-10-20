@@ -1,4 +1,4 @@
-  <div id="accordion" class="faq">
+  <div id="accordion" class="faq accordion">
     {% for item in site.faqs %}
  
     {% if item.category == include.selected %}
@@ -6,13 +6,13 @@
     <div class="card p-3 mb-2">
       <div class="card-header" id="heading-{{ forloop.index }}">
         <h5 class="mb-0">
-          <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#collapse-{{ forloop.index }}" aria-expanded="true" aria-controls="collapse-{{ forloop.index }}">
+          <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}">
             {{ item.title }}
           </a>
         </h5>
       </div>
       {% if forloop.index == 1 %}
-      <div id="collapse-{{ forloop.index }}" class="collapse show" aria-labelledby="heading-{{ forloop.index }}" data-parent="#accordion">
+      <div id="collapse-{{ forloop.index }}" class="collapse" aria-labelledby="heading-{{ forloop.index }}" data-parent="#accordion">
       {% endif %}    
 
       {% if forloop.index > 1 %}
