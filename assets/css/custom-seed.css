@@ -448,6 +448,7 @@ body {
   font-weight: 700;
   font-size: 12px;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 12%);
+  padding: 10px;
 }
 
 .btn-primary:hover, .btn-primary:active {
@@ -459,7 +460,7 @@ body {
 }
 
 .content-wrapper {
-  background-color: #f2f2f2;
+  background-color: #ccb161f0;
 }
 
 .popular-content {
@@ -728,6 +729,10 @@ body {
   background-color: #1E1C12;
   color: #ccb161f0;
   border: 3px solid #ccb161f0;
+}
+
+.list-type-number {
+  list-style-type:decimal;
 }
 
 
