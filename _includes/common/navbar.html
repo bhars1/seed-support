@@ -38,11 +38,11 @@
     </ul>
     <ul class="navbar-nav navbar-nav-right">
       <li class="nav-item nav-profile dropdown">
-        <a class="btn btn-rounded btn-primary" 
+        <a class="btn btn-rounded btn-primary telegram-button" 
           style="white-space: nowrap;"
           href="https://web.telegram.org/z/#1721399054"
           target="_blank">
-          <span><i class="mdi mdi-telegram"></i><strong>Contact Us</strong></span>
+          <span><i class="mdi mdi-telegram"></i><strong class="contact-us-text">Contact Us</strong></span>
         </a>
       </li>
       <a id="sidebarMenuButton" class="btn btn-rounded btn-primary p-2" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseExample">
@@ -53,10 +53,9 @@
 </nav>
 
 <div class="collapse" id="collapseMenu">
-  <div class="card card-body">
     <nav class="sidebarMobile" id="sidebar">
       <ul class="nav mt-5">
-      <li class="nav-item container">
+      <li class="nav-item container mt-2">
         <div class="input-group" id="search">
           <div class="input-group-prepend">
             <a id="searchButton" type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
@@ -119,7 +118,6 @@
     
     </nav>
     
-  </div>
 </div>
 
 
