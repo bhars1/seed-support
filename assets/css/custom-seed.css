@@ -4,13 +4,14 @@
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 .sidebar {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   color: white;
   background-color: #ccb161f0;
+  box-shadow: 3px 0 5px -2px #d6c07f;
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
@@ -443,7 +444,9 @@ body {
   /* border-color: #ccb161f0; */
   background-color: #1E1C12;
   color: #FFF;
-  border-radius: 4px;
+  border-radius: 100px 100px 100px 100px;
+  font-weight: 700;
+  font-size: 12px;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 12%);
 }
 
@@ -456,7 +459,7 @@ body {
 }
 
 .content-wrapper {
-  background-color: #FFFFFF;
+  background-color: #f2f2f2;
 }
 
 .popular-content {
