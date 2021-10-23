@@ -11,9 +11,15 @@
 
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
           var item = store[results[i].ref];
+          var formattedUrl = item.url.split(item.url.split(item.category)[1])[0];      
+
+          let str = formattedUrl;
+          let formatted = str.replace("/seed-support/", "/seed-support/app/");
+          // console.log(formatted);
+
           var result= '<div class="col-12 results">' +
           '    <div class="pt-4 border-bottom"> ' +
-          '      <a class="d-block h4" href="' + item.url + '">' + item.title + '</a> ' +
+          '      <a class="d-block h4 text-black" href="' + formatted + '.html'+  '">' + item.title + '</a> ' +
           '      <p class="page-description mt-1 w-75 text-muted"> ' +
                  item.content.substring(0, 150).trim() +
           '     </p> ' +
@@ -92,5 +98,6 @@
           }
         }
     }
+    
     
   //})();

@@ -25,48 +25,26 @@
     >
       <span class="icon-menu"></span>
     </button>
-    <ul class="navbar-nav mr-lg-2">
+    <ul class="navbar-nav mr-lg-2 w-75 ml-5">
 
       <div class="input-group ml-5" id="searchBar">
         <div class="input-group-prepend">
-          <!-- <button class="btn btn-outline-secondary" type="button"><i class="icon-search" style="color: white;"></i></button> -->
-          <a type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
+          <a id="searchButton" type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
             <i class="icon-search" style="color: white;"></i>
           </a>
         </div>
-        <input type="text" id="navbar-search-input" placeholder="Search now" class="form-control" style="width: 400px;" aria-label="search" aria-describedby="search">
+        <input type="text" id="navbar-search-input" placeholder="Search now" class="form-control" style="width: 600px;" aria-label="search" aria-describedby="search">
       </div>
-
-
-      <!-- <li class="nav-item nav-search d-none d-lg-block">
-        <div class="input-group">
-          <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-            <span class="input-group-text" id="search">
-              <a type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
-                <i class="icon-search" style="color: white;"></i>
-              </a>             
-            </span>
-          </div>
-          <input
-            type="text"
-            class="form-control text-white"
-            id="navbar-search-input"
-            placeholder="Search now"
-            aria-label="search"
-            aria-describedby="search"
-          />
-        </div>
-      </li> -->
     </ul>
     <ul class="navbar-nav navbar-nav-right">
       <li class="nav-item nav-profile dropdown">
         <a
           class="btn btn-rounded btn-primary p-2" 
-          href="https://t.me/seedfinance"
+          href="https://web.telegram.org/z/#1721399054"
           target="_blank"
         >
           <!-- <img src="images/faces/face28.jpg" alt="profile"/> -->
-          <span><i class="mdi mdi-telegram"></i><strong>Chat with Us</strong></span>
+          <span><i class="mdi mdi-telegram"></i><strong>Contact Us</strong></span>
         </a>
       </li>
       <a id="sidebarMenuButton" class="btn btn-rounded btn-primary p-2" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseExample">
@@ -83,7 +61,7 @@
       <li class="nav-item container">
         <div class="input-group" id="search">
           <div class="input-group-prepend">
-            <a type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
+            <a id="searchButton" type="button" class="btn btn-outline-secondary" href='{{ "/search/results.html" | absolute_url }} ' onclick="setSearchQuery();">
               <i class="icon-search" style="color: white;"></i>
             </a>
           </div>
@@ -145,4 +123,5 @@
     
   </div>
 </div>
+
 
