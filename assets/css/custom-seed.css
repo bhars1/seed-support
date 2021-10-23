@@ -1,5 +1,6 @@
 .sidebar .nav .nav-item.active > .nav-link {
-  background: #ccb161f0;
+  background: #1E1C12;
+  border: 3px solid #ccb161f0;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
 
 .sidebar {
   font-family: 'Poppins';
+  color: white;
+  background-color: #ccb161f0;
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
@@ -25,8 +28,8 @@ body {
 }
 
 .sidebar .nav.sub-menu {
-  background-color: #fff;
-  color: #000;
+  background-color: #f0dca1f0;
+  color: white;
 }
 
 .sidebar .nav.sub-menu .nav-item{
@@ -38,7 +41,8 @@ body {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link.active{
-  background: #ccb161f0;
+  background: #1E1C12;
+  border: 3px solid #ccb161f0;
 }
 
 .sidebar .nav.sub-menu .nav-link:hover {
@@ -49,6 +53,7 @@ body {
 
 .sidebar .nav.sub-menu .nav-item{
   margin-left: -30px;
+  margin-right: 10px;
 }
 
 .sidebar-dark .sidebar {
@@ -67,8 +72,16 @@ body {
   background: #ccb161f0;
 }
 
-.sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {
-  background: #c19b2f !important;
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown i {
+  margin-right: 0;
+}
+
+.sidebar .nav .nav-item .nav-link .menu-title {
+  color: white;
+}
+
+.page-body-wrapper{
+  padding-top: 40px;
 }
 
 
@@ -477,7 +490,8 @@ body {
 
 .sidebarMobile {
   /* min-height: calc(100vh - 60px); */
-  background: #fff;
+  background: #ccb161f0;
+  margin-top: -10px;
   /* font-family: "Nunito", sans-serif; */
   font-weight: 500;
   padding: 0;
@@ -520,7 +534,7 @@ body {
   align-items: center;
   white-space: nowrap;
   padding: 0.8125rem 1.937rem 0.8125rem 1rem;
-  color: #6C7383;
+  color: white;
   border-radius: 8px;
   -webkit-transition-duration: 0.45s;
   -moz-transition-duration: 0.45s;
@@ -536,19 +550,22 @@ body {
 
 .sidebarMobile .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
 .sidebarMobile .nav:not(.sub-menu) > .nav-item:hover[aria-expanded="true"] {
-  background: #ccb161f0;
+  background: #1E1C12;
+  border: 3px solid #ccb161f0;
 }
 
 .sidebarMobile .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] {
-  background: #ccb161f0;
+  background: #1E1C12;
+  border: 3px solid #ccb161f0;
 }
 
 .sidebarMobile .nav:not(.sub-menu) > .nav-item.active {
-  background: #ccb161f0;
+  background: #1E1C12;
+  border: 3px solid #ccb161f0;
 }
 
 .sidebarMobile .nav.sub-menu {
-  background: #dfb232;
+  background: #f0dca1f0;
 }
 
 .sidebarMobile .sidebar {
@@ -557,6 +574,10 @@ body {
 
 .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title {
   background: #c19b2f !important;
+}
+
+.sidebar .nav .nav-item .nav-link i.menu-icon {
+  color: white;
 }
 
 
@@ -618,6 +639,14 @@ body {
 
   #sidebarMenuButton {
     display: block;
+  }
+
+  .contact-us-text {
+    display: none;
+  }
+
+  .telegram-button {
+    padding: 8px;
   }
 }
 
@@ -697,6 +726,7 @@ body {
   color: #ccb161f0;
   border: 3px solid #ccb161f0;
 }
+
 
 
 
